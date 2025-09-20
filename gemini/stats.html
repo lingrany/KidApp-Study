@@ -1,0 +1,91 @@
+<!-- stats.html -->
+<div class="p-4 pb-24 bg-gray-50 min-h-full">
+    <!-- Header -->
+    <div class="text-center mb-6">
+        <h1 class="text-xl font-bold text-gray-800">统计报告</h1>
+    </div>
+
+    <!-- Date Range Selector -->
+    <div class="flex justify-center bg-gray-200 rounded-full p-1 mb-6">
+        <button class="px-4 py-1 text-sm font-semibold text-gray-700 rounded-full bg-white shadow-sm">周</button>
+        <button class="px-4 py-1 text-sm font-semibold text-gray-500 rounded-full">月</button>
+        <button class="px-4 py-1 text-sm font-semibold text-gray-500 rounded-full">年</button>
+    </div>
+
+    <!-- Main Stats Card -->
+    <div class="bg-white rounded-2xl p-4 shadow-sm mb-6">
+        <h2 class="font-bold text-lg text-gray-800 mb-1">本周概览</h2>
+        <p class="text-sm text-gray-500 mb-4">干得漂亮！继续保持。</p>
+        
+        <!-- Chart -->
+        <div class="h-48 flex items-end justify-between space-x-2">
+            <!-- Day 1 -->
+            <div class="text-center w-full">
+                <div class="bg-blue-400 rounded-lg" style="height: 60%"></div>
+                <p class="text-xs text-gray-400 mt-1">一</p>
+            </div>
+            <!-- Day 2 -->
+            <div class="text-center w-full">
+                <div class="bg-blue-400 rounded-lg" style="height: 80%"></div>
+                <p class="text-xs text-gray-400 mt-1">二</p>
+            </div>
+            <!-- Day 3 -->
+            <div class="text-center w-full">
+                <div class="bg-blue-400 rounded-lg" style="height: 75%"></div>
+                <p class="text-xs text-gray-400 mt-1">三</p>
+            </div>
+            <!-- Day 4 -->
+            <div class="text-center w-full">
+                <div class="bg-blue-200 rounded-lg" style="height: 40%"></div>
+                <p class="text-xs text-gray-400 mt-1">四</p>
+            </div>
+            <!-- Day 5 -->
+            <div class="text-center w-full">
+                <div class="bg-blue-400 rounded-lg" style="height: 90%"></div>
+                <p class="text-xs text-gray-400 mt-1">五</p>
+            </div>
+            <!-- Day 6 -->
+            <div class="text-center w-full">
+                <div class="bg-blue-400 rounded-lg" style="height: 85%"></div>
+                <p class="text-xs text-gray-400 mt-1">六</p>
+            </div>
+            <!-- Day 7 -->
+            <div class="text-center w-full">
+                <div class="bg-blue-300 rounded-lg" style="height: 50%"></div>
+                <p class="text-xs text-gray-400 mt-1">日</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Key Metrics -->
+    <div class="grid grid-cols-2 gap-4">
+        <div class="bg-white rounded-2xl p-4 shadow-sm">
+            <div class="flex items-center text-green-500 mb-2">
+                <i class="fas fa-check-circle text-2xl"></i>
+                <p class="ml-2 font-bold text-lg">92%</p>
+            </div>
+            <p class="text-sm font-semibold text-gray-600">习惯完成率</p>
+        </div>
+        <div class="bg-white rounded-2xl p-4 shadow-sm">
+            <div class="flex items-center text-orange-500 mb-2">
+                <i class="fas fa-fire-alt text-2xl"></i>
+                <p class="ml-2 font-bold text-lg">12</p>
+            </div>
+            <p class="text-sm font-semibold text-gray-600">最长连胜天数</p>
+        </div>
+        <div class="bg-white rounded-2xl p-4 shadow-sm">
+            <div class="flex items-center text-indigo-500 mb-2">
+                <i class="fas fa-trophy text-2xl"></i>
+                <p class="ml-2 font-bold text-lg">5</p>
+            </div>
+            <p class="text-sm font-semibold text-gray-600">本月获得成就</p>
+        </div>
+        <div class="bg-white rounded-2xl p-4 shadow-sm">
+            <div class="flex items-center text-blue-500 mb-2">
+                <i class="fas fa-calendar-check text-2xl"></i>
+                <p class="ml-2 font-bold text-lg">158</p>
+            </div>
+            <p class="text-sm font-semibold text-gray-600">总打卡次数</p>
+        </div>
+    </div>
+</div>

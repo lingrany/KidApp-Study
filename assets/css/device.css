@@ -1,0 +1,7 @@
+/* iPhone-like device chrome */
+.device{width:360px;max-width:100%;margin:0 auto;}
+.device .bezel{position:relative;width:100%;padding:18px;background:linear-gradient(145deg,#0f172a,#111827);border-radius:34px;box-shadow:0 8px 24px rgba(15,23,42,.35), inset 0 0 0 2px rgba(255,255,255,.06)}
+.device .island{position:absolute;left:50%;top:10px;transform:translateX(-50%);height:26px;width:120px;background:#0b1220;border-radius:14px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.device .screen{position:relative;background:#000;border-radius:26px;overflow:hidden;height:740px}
+.device iframe{display:block;border:0;height:100%}
+@media (min-width:1024px){.device{width:380px}.device .screen{height:780px}}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>奖励商城</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  </head>
+  <body class="bg-white text-slate-800" onload="gsap.from('.r-title',{y:12,opacity:0,duration:0.35,ease:'power2.out'});gsap.set('.r-card',{opacity:0,y:14});gsap.to('.r-card',{opacity:1,y:0,stagger:0.08,duration:0.45,ease:'power2.out'});">
+    <div class="h-[740px] lg:h-[780px] flex flex-col">
+      <div class="pt-6 px-4 flex items-center justify-between">
+        <div class="text-2xl font-extrabold r-title">奖励商城</div>
+        <div class="px-3 py-1.5 rounded-lg bg-yellow-50 text-amber-700 text-sm"><i class="fa-solid fa-coins"></i> 320</div>
+      </div>
+
+      <div class="px-4 mt-4">
+        <div class="rounded-2xl border border-slate-200 p-4 bg-slate-50 r-card">
+          <div class="font-semibold">做任务赚金币</div>
+          <div class="mt-2 grid grid-cols-2 gap-2 text-sm">
+            <div class="rounded-xl bg-white p-3 border border-slate-100 flex items-center justify-between"><span><i class="fa-solid fa-fire text-amber-500"></i> 连续学习 10 分钟</span><button class="px-2 py-1 bg-emerald-500 text-white rounded-md">+10</button></div>
+            <div class="rounded-xl bg-white p-3 border border-slate-100 flex items-center justify-between"><span><i class="fa-solid fa-volume-high text-sky-500"></i> 发音评测 3 次</span><button class="px-2 py-1 bg-emerald-500 text-white rounded-md">+15</button></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-4 mt-4 grid grid-cols-2 gap-3">
+        <div class="rounded-2xl overflow-hidden border border-slate-100 bg-white shadow-sm r-card">
+          <img class="h-28 w-full object-cover" src="https://images.unsplash.com/photo-1543857778-c4a1a3e0b2eb?q=80&w=500&auto=format&fit=crop" alt="sticker" />
+          <div class="p-3">
+            <div class="font-semibold">动物贴纸包</div>
+            <div class="text-xs text-slate-500">80 金币</div>
+            <div class="mt-2 flex justify-end"><button class="px-3 py-1.5 bg-amber-500 text-white rounded-lg text-sm">兑换</button></div>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden border border-slate-100 bg-white shadow-sm r-card">
+          <img class="h-28 w-full object-cover" src="https://images.unsplash.com/photo-1542751110-97427bbecf20?q=80&w=500&auto=format&fit=crop" alt="theme" />
+          <div class="p-3">
+            <div class="font-semibold">太空主题皮肤</div>
+            <div class="text-xs text-slate-500">150 金币</div>
+            <div class="mt-2 flex justify-end"><button class="px-3 py-1.5 bg-amber-500 text-white rounded-lg text-sm">兑换</button></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 底部标签栏（功能页，不高亮） -->
+      <div class="mt-auto border-t border-slate-200 bg-white/80 backdrop-blur px-6 py-3 flex items-center justify-between text-slate-500">
+        <a href="home.html"><i class="fa-solid fa-house text-lg"></i><div class="text-[10px]">首页</div></a>
+        <a href="lessons.html"><i class="fa-solid fa-book text-lg"></i><div class="text-[10px]">课程</div></a>
+        <a href="games.html"><i class="fa-solid fa-gamepad text-lg"></i><div class="text-[10px]">游戏</div></a>
+        <a href="me.html"><i class="fa-solid fa-user text-lg"></i><div class="text-[10px]">我的</div></a>
+      </div>
+    </div>
+  </body>
+</html>

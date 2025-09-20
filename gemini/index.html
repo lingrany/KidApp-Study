@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HabitFlow Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-800 flex flex-col lg:flex-row justify-center items-center min-h-screen p-8 space-y-8 lg:space-y-0 lg:space-x-12">
+
+    <!-- Left Side: Phone Mockup -->
+    <div class="flex-shrink-0">
+        <h2 class="text-2xl font-bold text-white text-center mb-4">HabitFlow App</h2>
+        <div class="mobile-mockup">
+            <div class="mobile-screen">
+                <div class="camera-notch"></div>
+                <div class="screen-content">
+                    <!-- Section for home.html -->
+                    <section id="home-section" class="p-4 pb-24 bg-gray-50 min-h-full">
+                        <div class="flex justify-between items-center mb-6">
+                            <div>
+                                <p class="text-gray-500 text-sm">星期一, 9月15日</p>
+                                <h1 class="text-2xl font-bold text-gray-800">早上好, Gemini</h1>
+                            </div>
+                            <img class="w-12 h-12 rounded-full object-cover" src="https://source.unsplash.com/random/100x100/?portrait,person" alt="User Avatar">
+                        </div>
+                        <div class="bg-white rounded-2xl p-4 shadow-sm mb-6">
+                            <h2 class="font-bold text-lg text-gray-800 mb-3">今日日程</h2>
+                            <div class="space-y-3">
+                                <div class="flex items-center">
+                                    <div class="w-12 text-center"><p class="font-semibold text-gray-800">09:00</p><p class="text-xs text-gray-400">AM</p></div>
+                                    <div class="w-1 h-10 bg-blue-200 rounded-full mx-3"></div>
+                                    <div class="flex-grow"><p class="font-semibold text-gray-700">产品设计评审会</p><p class="text-sm text-gray-500">在线会议</p></div>
+                                    <i class="fas fa-video text-blue-400"></i>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-12 text-center"><p class="font-semibold text-gray-800">14:30</p><p class="text-xs text-gray-400">PM</p></div>
+                                    <div class="w-1 h-10 bg-purple-200 rounded-full mx-3"></div>
+                                    <div class="flex-grow"><p class="font-semibold text-gray-700">健身: 胸部训练</p><p class="text-sm text-gray-500">城西健身房</p></div>
+                                    <i class="fas fa-dumbbell text-purple-400"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-2xl p-4 shadow-sm">
+                            <h2 class="font-bold text-lg text-gray-800 mb-4">今日习惯</h2>
+                            <div class="space-y-4">
+                                <div class="flex items-center bg-blue-50 p-3 rounded-xl">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-4"><i class="fas fa-book-open text-blue-500 text-xl"></i></div>
+                                    <div class="flex-grow"><p class="font-semibold text-gray-800">阅读30分钟</p><p class="text-sm text-gray-500">已坚持 <span class="font-bold text-blue-500">12</span> 天</p></div>
+                                    <div class="w-12 h-12 flex items-center justify-center"><button class="w-8 h-8 rounded-full border-2 border-blue-400 flex items-center justify-center text-white transition-all duration-300 hover:bg-blue-400"><i class="fas fa-check"></i></button></div>
+                                </div>
+                                <div class="flex items-center bg-green-50 p-3 rounded-xl">
+                                    <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-4"><i class="fas fa-tint text-green-500 text-xl"></i></div>
+                                    <div class="flex-grow"><p class="font-semibold text-gray-800">喝8杯水</p><p class="text-sm text-gray-500">2 / 8 杯</p></div>
+                                    <div class="w-12 h-12 flex items-center justify-center"><button class="w-8 h-8 rounded-full border-2 border-green-400 flex items-center justify-center text-white transition-all duration-300 hover:bg-green-400"><i class="fas fa-plus"></i></button></div>
+                                </div>
+                                <div class="flex items-center bg-gray-100 p-3 rounded-xl opacity-70">
+                                    <div class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center mr-4"><i class="fas fa-bed text-gray-500 text-xl"></i></div>
+                                    <div class="flex-grow"><p class="font-semibold text-gray-500 line-through">23:00前睡觉</p><p class="text-sm text-gray-400">已完成</p></div>
+                                    <div class="w-12 h-12 flex items-center justify-center"><div class="w-8 h-8 rounded-full bg-indigo-500 flex items-center justify-center text-white"><i class="fas fa-check"></i></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section for habits.html -->
+                    <section id="habits-section" class="p-4 pb-24 bg-gray-50 min-h-full hidden">
+                        <div class="text-center mb-6"><h1 class="text-xl font-bold text-gray-800">所有习惯</h1></div>
+                        <div class="space-y-4">
+                            <div class="bg-white rounded-2xl p-4 shadow-sm flex items-center">
+                                <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4"><i class="fas fa-book-open text-blue-500 text-2xl"></i></div>
+                                <div class="flex-grow"><p class="font-bold text-gray-800">阅读</p><p class="text-sm text-gray-500">每日</p></div>
+                                <div class="text-right"><p class="font-semibold text-orange-500"><i class="fas fa-fire-alt"></i> 12 天</p><p class="text-xs text-gray-400">当前连胜</p></div>
+                            </div>
+                            <div class="bg-white rounded-2xl p-4 shadow-sm flex items-center">
+                                <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mr-4"><i class="fas fa-dumbbell text-purple-500 text-2xl"></i></div>
+                                <div class="flex-grow"><p class="font-bold text-gray-800">健身</p><p class="text-sm text-gray-500">每周一、三、五</p></div>
+                                <div class="text-right"><p class="font-semibold text-orange-500"><i class="fas fa-fire-alt"></i> 3 周</p><p class="text-xs text-gray-400">当前连胜</p></div>
+                            </div>
+                            <div class="bg-white rounded-2xl p-4 shadow-sm flex items-center">
+                                <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mr-4"><i class="fas fa-tint text-green-500 text-2xl"></i></div>
+                                <div class="flex-grow"><p class="font-bold text-gray-800">喝水</p><p class="text-sm text-gray-500">每日8杯</p></div>
+                                <div class="text-right"><p class="font-semibold text-gray-600"><i class="fas fa-check-circle"></i> 95%</p><p class="text-xs text-gray-400">本月完成率</p></div>
+                            </div>
+                            <div class="bg-white rounded-2xl p-4 shadow-sm flex items-center">
+                                <div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center mr-4"><i class="fas fa-bed text-indigo-500 text-2xl"></i></div>
+                                <div class="flex-grow"><p class="font-bold text-gray-800">早睡</p><p class="text-sm text-gray-500">23:00 前</p></div>
+                                <div class="text-right"><p class="font-semibold text-orange-500"><i class="fas fa-fire-alt"></i> 5 天</p><p class="text-xs text-gray-400">当前连胜</p></div>
+                            </div>
+                            <div class="bg-gray-100 border-2 border-dashed border-gray-300 rounded-2xl p-4 text-center cursor-pointer hover:bg-gray-200 transition"><p class="font-semibold text-gray-600"><i class="fas fa-plus mr-2"></i> 添加新习惯</p></div>
+                        </div>
+                    </section>
+
+                    <!-- Section for stats.html -->
+                    <section id="stats-section" class="p-4 pb-24 bg-gray-50 min-h-full hidden">
+                        <div class="text-center mb-6"><h1 class="text-xl font-bold text-gray-800">统计报告</h1></div>
+                        <div class="flex justify-center bg-gray-200 rounded-full p-1 mb-6">
+                            <button class="px-4 py-1 text-sm font-semibold text-gray-700 rounded-full bg-white shadow-sm">周</button>
+                            <button class="px-4 py-1 text-sm font-semibold text-gray-500 rounded-full">月</button>
+                            <button class="px-4 py-1 text-sm font-semibold text-gray-500 rounded-full">年</button>
+                        </div>
+                        <div class="bg-white rounded-2xl p-4 shadow-sm mb-6">
+                            <h2 class="font-bold text-lg text-gray-800 mb-1">本周概览</h2>
+                            <p class="text-sm text-gray-500 mb-4">干得漂亮！继续保持。</p>
+                            <div class="h-48 flex items-end justify-between space-x-2">
+                                <div class="text-center w-full"><div class="bg-blue-400 rounded-lg" style="height: 60%"></div><p class="text-xs text-gray-400 mt-1">一</p></div>
+                                <div class="text-center w-full"><div class="bg-blue-400 rounded-lg" style="height: 80%"></div><p class="text-xs text-gray-400 mt-1">二</p></div>
+                                <div class="text-center w-full"><div class="bg-blue-400 rounded-lg" style="height: 75%"></div><p class="text-xs text-gray-400 mt-1">三</p></div>
+                                <div class="text-center w-full"><div class="bg-blue-200 rounded-lg" style="height: 40%"></div><p class="text-xs text-gray-400 mt-1">四</p></div>
+                                <div class="text-center w-full"><div class="bg-blue-400 rounded-lg" style="height: 90%"></div><p class="text-xs text-gray-400 mt-1">五</p></div>
+                                <div class="text-center w-full"><div class="bg-blue-400 rounded-lg" style="height: 85%"></div><p class="text-xs text-gray-400 mt-1">六</p></div>
+                                <div class="text-center w-full"><div class="bg-blue-300 rounded-lg" style="height: 50%"></div><p class="text-xs text-gray-400 mt-1">日</p></div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-white rounded-2xl p-4 shadow-sm"><div class="flex items-center text-green-500 mb-2"><i class="fas fa-check-circle text-2xl"></i><p class="ml-2 font-bold text-lg">92%</p></div><p class="text-sm font-semibold text-gray-600">习惯完成率</p></div>
+                            <div class="bg-white rounded-2xl p-4 shadow-sm"><div class="flex items-center text-orange-500 mb-2"><i class="fas fa-fire-alt text-2xl"></i><p class="ml-2 font-bold text-lg">12</p></div><p class="text-sm font-semibold text-gray-600">最长连胜天数</p></div>
+                            <div class="bg-white rounded-2xl p-4 shadow-sm"><div class="flex items-center text-indigo-500 mb-2"><i class="fas fa-trophy text-2xl"></i><p class="ml-2 font-bold text-lg">5</p></div><p class="text-sm font-semibold text-gray-600">本月获得成就</p></div>
+                            <div class="bg-white rounded-2xl p-4 shadow-sm"><div class="flex items-center text-blue-500 mb-2"><i class="fas fa-calendar-check text-2xl"></i><p class="ml-2 font-bold text-lg">158</p></div><p class="text-sm font-semibold text-gray-600">总打卡次数</p></div>
+                        </div>
+                    </section>
+
+                    <!-- Section for me.html -->
+                    <section id="me-section" class="p-4 pb-24 bg-gray-50 min-h-full hidden">
+                        <!-- Profile Header -->
+                        <div class="flex flex-col items-center text-center mb-8">
+                            <img class="w-24 h-24 rounded-full object-cover mb-4 shadow-lg" src="https://source.unsplash.com/random/200x200/?portrait,person,man" alt="User Avatar">
+                            <h1 class="text-2xl font-bold text-gray-800">Gemini</h1>
+                            <p class="text-gray-500">“让优秀成为一种习惯”</p>
+                        </div>
+
+                        <!-- Achievements Card -->
+                        <div class="bg-white rounded-2xl p-4 shadow-sm mb-6">
+                            <div class="flex justify-between items-center mb-3">
+                                <h2 class="font-bold text-lg text-gray-800">我的成就</h2>
+                                <a href="#" class="text-sm font-semibold text-blue-500">查看全部</a>
+                            </div>
+                            <div class="flex justify-around">
+                                <div class="text-center text-gray-600"><i class="fas fa-star text-4xl text-yellow-400"></i><p class="text-xs mt-1">新星</p></div>
+                                <div class="text-center text-gray-600"><i class="fas fa-fire-alt text-4xl text-orange-500"></i><p class="text-xs mt-1">连胜7天</p></div>
+                                <div class="text-center text-gray-600"><i class="fas fa-trophy text-4xl text-indigo-500"></i><p class="text-xs mt-1">完美月份</p></div>
+                                <div class="text-center text-gray-400"><i class="fas fa-medal text-4xl"></i><p class="text-xs mt-1">早起鸟</p></div>
+                            </div>
+                        </div>
+
+                        <!-- Settings List -->
+                        <div class="bg-white rounded-2xl p-2 shadow-sm">
+                            <ul class="divide-y divide-gray-100">
+                                <li class="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer"><i class="fas fa-user-circle w-6 text-center text-gray-500"></i><span class="ml-3 font-semibold text-gray-700">账户信息</span><i class="fas fa-chevron-right ml-auto text-gray-400"></i></li>
+                                <li class="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer nav-link" data-target="stats-section"><i class="fas fa-chart-pie w-6 text-center text-gray-500"></i><span class="ml-3 font-semibold text-gray-700">统计报告</span><i class="fas fa-chevron-right ml-auto text-gray-400"></i></li>
+                                <li class="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer"><i class="fas fa-bell w-6 text-center text-gray-500"></i><span class="ml-3 font-semibold text-gray-700">通知设置</span><i class="fas fa-chevron-right ml-auto text-gray-400"></i></li>
+                                <li class="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer"><i class="fas fa-palette w-6 text-center text-gray-500"></i><span class="ml-3 font-semibold text-gray-700">外观与主题</span><i class="fas fa-chevron-right ml-auto text-gray-400"></i></li>
+                                <li class="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer"><i class="fas fa-shield-alt w-6 text-center text-gray-500"></i><span class="ml-3 font-semibold text-gray-700">隐私与安全</span><i class="fas fa-chevron-right ml-auto text-gray-400"></i></li>
+                                <li class="flex items-center p-3 hover:bg-gray-50 rounded-lg cursor-pointer"><i class="fas fa-cloud-download-alt w-6 text-center text-gray-500"></i><span class="ml-3 font-semibold text-gray-700">导入与导出</span><i class="fas fa-chevron-right ml-auto text-gray-400"></i></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- Section for teams.html -->
+                    <section id="teams-section" class="p-4 pb-24 bg-gray-50 min-h-full hidden">
+                        <!-- Header -->
+                        <div class="text-center mb-6"><h1 class="text-xl font-bold text-gray-800">习惯小组</h1></div>
+                        <!-- Team List -->
+                        <div class="space-y-4">
+                            <h2 class="font-semibold text-gray-600 px-2">我加入的</h2>
+                            <!-- Team 1: Reading Club -->
+                            <div class="bg-white rounded-2xl p-4 shadow-sm">
+                                <div class="flex justify-between items-center mb-3">
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center mr-4"><i class="fas fa-book-reader text-yellow-500 text-2xl"></i></div>
+                                        <div><p class="font-bold text-gray-800">早起读书会</p><p class="text-sm text-gray-500">共同习惯: 每日阅读</p></div>
+                                    </div>
+                                    <i class="fas fa-chevron-right text-gray-400"></i>
+                                </div>
+                                <!-- Progress and Members -->
+                                <div>
+                                    <div class="flex justify-between items-center mb-1"><p class="text-sm font-semibold text-green-600">今日进度: 80%</p><p class="text-sm text-gray-500">4/5 人已打卡</p></div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2 mb-3"><div class="bg-green-500 h-2 rounded-full" style="width: 80%"></div></div>
+                                    <div class="flex items-center justify-between"><div class="flex -space-x-2"><img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://source.unsplash.com/random/100x100/?woman,portrait" alt="Member 1"><img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://source.unsplash.com/random/100x100/?man,portrait" alt="Member 2"><img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://source.unsplash.com/random/100x100/?person,portrait" alt="Member 3"><img class="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover" src="https://source.unsplash.com/random/100x100/?face,portrait" alt="Member 4"><div class="h-8 w-8 rounded-full ring-2 ring-white bg-gray-200 flex justify-center items-center text-xs font-semibold text-gray-500">+1</div></div></div>
+                                </div>
+                            </div>
+                            <!-- Team 2: Fitness Group -->
+                            <div class="bg-white rounded-2xl p-4 shadow-sm">
+                                <div class="flex justify-between items-center mb-3">
+                                    <div class="flex items-center">
+                                        <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mr-4"><i class="fas fa-running text-red-500 text-2xl"></i></div>
+                                        <div><p class="font-bold text-gray-800">30天健身挑战</p><p class="text-sm text-gray-500">共同习惯: 每日健身</p></div>
+                                    </div>
+                                    <i class="fas fa-chevron-right text-gray-400"></i>
+                                </div>
+                            </div>
+                            <!-- Join/Create Button -->
+                            <div class="bg-blue-50 border-2 border-dashed border-blue-300 rounded-2xl p-4 text-center cursor-pointer hover:bg-blue-100 transition mt-6"><p class="font-semibold text-blue-600"><i class="fas fa-plus-circle mr-2"></i> 创建或加入一个小组</p></div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Bottom Navigation -->
+                <div class="absolute bottom-0 left-0 right-0 h-24 bg-transparent flex justify-center items-start">
+                    <div class="w-full max-w-sm h-16 bottom-nav flex justify-around items-center rounded-3xl shadow-lg">
+                        <a href="#" data-target="home-section" class="nav-link text-blue-500 p-2"><i class="fas fa-home text-2xl"></i></a>
+                        <a href="#" data-target="habits-section" class="nav-link text-gray-400 p-2"><i class="fas fa-layer-group text-2xl"></i></a>
+                        <a href="#add-new" class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center -mt-8 border-4 border-white fab" aria-label="Add new item">
+                            <i class="fas fa-plus text-white text-2xl"></i>
+                        </a>
+                        <a href="#" data-target="teams-section" class="nav-link text-gray-400 p-2"><i class="fas fa-users text-2xl"></i></a>
+                        <a href="#" data-target="me-section" class="nav-link text-gray-400 p-2"><i class="fas fa-user text-2xl"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Side: Service Widgets -->
+    <div class="flex-shrink-0 space-y-8">
+        <h2 class="text-2xl font-bold text-white text-center mb-4">元服务卡片 (Widgets)</h2>
+        
+        <!-- Widget 1: Today's Tasks (Large) -->
+        <div class="widget-container">
+            <div class="widget p-5">
+                <div class="flex justify-between items-start mb-3">
+                    <div>
+                        <p class="font-bold text-gray-800">今日日程</p>
+                        <p class="text-xs text-gray-500">2 项未完成</p>
+                    </div>
+                    <i class="fas fa-clipboard-list text-gray-400"></i>
+                </div>
+                <div class="space-y-2 text-sm">
+                    <div class="flex items-center"><div class="w-2 h-2 rounded-full bg-blue-500 mr-3"></div><p class="text-gray-700 font-medium">09:00 产品设计评审会</p></div>
+                    <div class="flex items-center"><div class="w-2 h-2 rounded-full bg-purple-500 mr-3"></div><p class="text-gray-700 font-medium">14:30 健身: 胸部训练</p></div>
+                    <div class="flex items-center opacity-50"><div class="w-2 h-2 rounded-full bg-gray-400 mr-3"></div><p class="text-gray-500 font-medium line-through">18:00 取快递</p></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Widget 2: Habit Tracker (Small) -->
+        <div class="widget-container" style="width: 182px;">
+            <div class="widget p-4 relative overflow-hidden h-44 flex flex-col justify-between widget-bg-image" style="background-image: url('https://source.unsplash.com/random/400x400/?nature,water');">
+                <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                <div class="relative z-10">
+                    <p class="font-bold text-white">喝8杯水</p>
+                    <p class="text-sm text-white opacity-80"><i class="fas fa-fire-alt text-orange-300"></i> 连胜5天</p>
+                </div>
+                <div class="relative z-10 text-right">
+                    <button class="w-12 h-12 bg-white/30 backdrop-blur-sm rounded-full text-white text-xl hover:bg-white/50 transition">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const contentSections = document.querySelectorAll('section[id$="-section"]');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    const targetId = link.getAttribute('data-target');
+                    if (!targetId) return;
+
+                    // Hide all sections
+                    contentSections.forEach(section => {
+                        section.classList.add('hidden');
+                    });
+
+                    // Show the target section
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.remove('hidden');
+                    }
+
+                    // Update active link style
+                    navLinks.forEach(navLink => {
+                        navLink.classList.remove('text-blue-500');
+                        navLink.classList.add('text-gray-400');
+                    });
+                    link.classList.add('text-blue-500');
+                    link.classList.remove('text-gray-400');
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

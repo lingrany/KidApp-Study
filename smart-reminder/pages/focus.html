@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>专注模式 · 番茄钟</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  </head>
+  <body class="bg-white text-slate-800" onload="gsap.from('.timer',{scale:0.9,opacity:0,duration:0.4,ease:'power2.out'});gsap.set('.fstat',{opacity:0,y:14});gsap.to('.fstat',{opacity:1,y:0,stagger:0.08,duration:0.45,ease:'power2.out'});">
+    <div class="h-[740px] lg:h-[780px] flex flex-col">
+      <div class="pt-6 px-4 flex items-center justify-between">
+        <div class="text-2xl font-extrabold">专注模式</div>
+        <button class="px-3 py-1.5 rounded-lg bg-rose-50 text-rose-600 text-sm"><i class="fa-solid fa-gear"></i> 设置</button>
+      </div>
+
+      <div class="px-4 mt-8 flex justify-center">
+        <div class="w-56 h-56 rounded-full bg-gradient-to-br from-emerald-400 to-sky-500 text-white flex items-center justify-center shadow-2xl timer">
+          <div class="text-center">
+            <div class="text-sm opacity-80">番茄</div>
+            <div class="text-5xl font-extrabold">25:00</div>
+            <div class="text-xs opacity-80 mt-1">任务：写周报</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-4 mt-6 flex items-center justify-center gap-3">
+        <button class="px-4 py-2 rounded-xl bg-emerald-500 text-white text-sm"><i class="fa-solid fa-play"></i> 开始</button>
+        <button class="px-4 py-2 rounded-xl bg-slate-200 text-sm"><i class="fa-solid fa-pause"></i> 暂停</button>
+        <button class="px-4 py-2 rounded-xl bg-rose-500 text-white text-sm"><i class="fa-solid fa-stop"></i> 结束</button>
+      </div>
+
+      <div class="px-4 mt-6 grid grid-cols-3 gap-3 text-center">
+        <div class="rounded-2xl border border-slate-200 p-3 fstat">
+          <div class="text-xs text-slate-500">今日完成</div>
+          <div class="text-xl font-bold">3</div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-3 fstat">
+          <div class="text-xs text-slate-500">累计分钟</div>
+          <div class="text-xl font-bold">75</div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-3 fstat">
+          <div class="text-xs text-slate-500">最长连续</div>
+          <div class="text-xl font-bold">40</div>
+        </div>
+      </div>
+
+      <div class="mt-auto border-t border-slate-200 bg-white/80 backdrop-blur px-6 py-3 flex items-center justify-between text-slate-500">
+        <a href="home.html"><i class="fa-solid fa-house text-lg"></i><div class="text-[10px]">首页</div></a>
+        <a href="schedule.html"><i class="fa-solid fa-calendar-days text-lg"></i><div class="text-[10px]">日程</div></a>
+        <a href="tasks.html"><i class="fa-solid fa-list-check text-lg"></i><div class="text-[10px]">待办</div></a>
+        <a href="settings.html"><i class="fa-solid fa-gear text-lg"></i><div class="text-[10px]">设置</div></a>
+      </div>
+    </div>
+  </body>
+</html>
+
+

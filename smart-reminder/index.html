@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Reminder · 高保真原型</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/device-huawei.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="assets/js/anim.js"></script>
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-slate-50 to-white text-slate-800" onload="AnimKit.enter('.device-hw',{fromY:24});AnimKit.bindButtonBounce('button, .rounded-xl, .rounded-lg');">
+    <header class="sticky top-0 z-10 backdrop-blur bg-white/70 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-400 to-sky-500 flex items-center justify-center text-white shadow"><i class="fa-solid fa-bell"></i></div>
+          <div>
+            <h1 class="text-lg font-bold">Smart Reminder 智能提醒与习惯</h1>
+            <p class="text-xs text-slate-500">华为 Mate70 外观 · 所有页面以 iframe 展示</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-6">
+      <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <!-- Home -->
+        <div>
+          <div class="device-hw">
+            <div class="bezel">
+              <div class="camera"></div>
+              <div class="screen">
+                <iframe title="Home" src="pages/home.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">首页 Home</div>
+            <div class="text-xs text-slate-500">pages/home.html</div>
+          </div>
+        </div>
+
+        <!-- Schedule -->
+        <div>
+          <div class="device-hw">
+            <div class="bezel">
+              <div class="camera"></div>
+              <div class="screen">
+                <iframe title="Schedule" src="pages/schedule.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">日程/提醒 Schedule</div>
+            <div class="text-xs text-slate-500">pages/schedule.html</div>
+          </div>
+        </div>
+
+        <!-- Tasks -->
+        <div>
+          <div class="device-hw">
+            <div class="bezel">
+              <div class="camera"></div>
+              <div class="screen">
+                <iframe title="Tasks" src="pages/tasks.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">待办 Tasks</div>
+            <div class="text-xs text-slate-500">pages/tasks.html</div>
+          </div>
+        </div>
+
+        <!-- Habits -->
+        <div>
+          <div class="device-hw">
+            <div class="bezel">
+              <div class="camera"></div>
+              <div class="screen">
+                <iframe title="Habits" src="pages/habits.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">习惯打卡 Habits</div>
+            <div class="text-xs text-slate-500">pages/habits.html</div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div>
+          <div class="device-hw">
+            <div class="bezel">
+              <div class="camera"></div>
+              <div class="screen">
+                <iframe title="Stats" src="pages/stats.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">数据可视化 Stats</div>
+            <div class="text-xs text-slate-500">pages/stats.html</div>
+          </div>
+        </div>
+
+        <!-- Widgets -->
+        <div>
+          <div class="device-hw">
+            <div class="bezel">
+              <div class="camera"></div>
+              <div class="screen">
+                <iframe title="Widgets" src="pages/widgets.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">元服务卡片 Widgets</div>
+            <div class="text-xs text-slate-500">pages/widgets.html</div>
+          </div>
+        </div>
+
+        <!-- Settings -->
+        <div>
+          <div class="device-hw">
+            <div class="bezel">
+              <div class="camera"></div>
+              <div class="screen">
+                <iframe title="Settings" src="pages/settings.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">设置 Settings</div>
+            <div class="text-xs text-slate-500">pages/settings.html</div>
+          </div>
+        </div>
+
+        <!-- Strategies -->
+        <div>
+          <div class="device-hw">
+            <div class="bezel">
+              <div class="camera"></div>
+              <div class="screen">
+                <iframe title="Strategies" src="pages/strategies.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">智能提醒策略</div>
+            <div class="text-xs text-slate-500">pages/strategies.html</div>
+          </div>
+        </div>
+
+        <!-- Focus -->
+        <div>
+          <div class="device-hw">
+            <div class="bezel">
+              <div class="camera"></div>
+              <div class="screen">
+                <iframe title="Focus" src="pages/focus.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">专注模式（番茄钟）</div>
+            <div class="text-xs text-slate-500">pages/focus.html</div>
+          </div>
+        </div>
+
+        <!-- Onboarding -->
+        <div>
+          <div class="device-hw">
+            <div class="bezel">
+              <div class="camera"></div>
+              <div class="screen">
+                <iframe title="Onboarding" src="pages/onboarding.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">引导与权限</div>
+            <div class="text-xs text-slate-500">pages/onboarding.html</div>
+          </div>
+        </div>
+      </section>
+
+      <p class="mt-8 text-center text-xs text-slate-400">提示：所有子页面为独立 HTML 文件，可直接导入 Figma 二次编辑</p>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kid Study - 高保真原型</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/device.css" />
+    <link rel="stylesheet" href="assets/css/device-huawei.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="assets/js/anim.js"></script>
+    <script>function switchDevice(type){const ip=document.querySelectorAll('.group-iphone');const hw=document.querySelectorAll('.group-huawei');ip.forEach(e=>e.style.display= type==='iphone' ? '' : 'none');hw.forEach(e=>e.style.display= type==='huawei' ? '' : 'none');const group = type==='iphone'?'.group-iphone':'.group-huawei';AnimKit.enter(group+' .device, '+group+' .device-huawei',{stagger:0.08,duration:0.5,fromY:24});}
+      window.addEventListener('DOMContentLoaded',()=>{AnimKit.bindButtonBounce('button, .rounded-xl, .rounded-lg');});
+    </script>
+  </head>
+  <body class="min-h-screen bg-gradient-to-b from-sky-50 to-white text-slate-800" onload="switchDevice('iphone')">
+    <header class="sticky top-0 z-10 backdrop-blur bg-white/60 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-sky-400 to-indigo-500 flex items-center justify-center text-white shadow"><i class="fa-solid fa-graduation-cap"></i></div>
+          <div>
+            <h1 class="text-lg font-bold">Kid Study 少儿单词 · 高保真原型</h1>
+            <p class="text-xs text-slate-500">iPhone / 华为 模拟外观 · 所有页面以 iframe 展示</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-2 text-slate-600 text-sm">
+          <button class="px-3 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-50" onclick="switchDevice('iphone')"><i class="fa-solid fa-mobile-screen"></i> iPhone</button>
+          <button class="px-3 py-1.5 rounded-lg border border-slate-300 bg-white hover:bg-slate-50" onclick="switchDevice('huawei')"><i class="fa-solid fa-mobile"></i> Huawei</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-6">
+      <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <!-- iPhone 外观页面 -->
+        <div class="group-iphone">
+          <div class="device">
+            <div class="bezel">
+              <div class="island"></div>
+              <div class="screen">
+                <iframe title="Home" src="pages/home.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">首页 Home</div>
+            <div class="text-xs text-slate-500">pages/home.html</div>
+          </div>
+        </div>
+
+        <div class="group-iphone">
+          <div class="device">
+            <div class="bezel">
+              <div class="island"></div>
+              <div class="screen">
+                <iframe title="Lessons" src="pages/lessons.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">课程/单词 Lessons</div>
+            <div class="text-xs text-slate-500">pages/lessons.html</div>
+          </div>
+        </div>
+
+        <div class="group-iphone">
+          <div class="device">
+            <div class="bezel">
+              <div class="island"></div>
+              <div class="screen">
+                <iframe title="Games" src="pages/games.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">游戏 Games</div>
+            <div class="text-xs text-slate-500">pages/games.html</div>
+          </div>
+        </div>
+
+        <div class="group-iphone">
+          <div class="device">
+            <div class="bezel">
+              <div class="island"></div>
+              <div class="screen">
+                <iframe title="Parents" src="pages/parents.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">家长控制</div>
+            <div class="text-xs text-slate-500">pages/parents.html</div>
+          </div>
+        </div>
+
+        <div class="group-iphone">
+          <div class="device">
+            <div class="bezel">
+              <div class="island"></div>
+              <div class="screen">
+                <iframe title="Rewards" src="pages/rewards.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">奖励商城</div>
+            <div class="text-xs text-slate-500">pages/rewards.html</div>
+          </div>
+        </div>
+
+        <div class="group-iphone">
+          <div class="device">
+            <div class="bezel">
+              <div class="island"></div>
+              <div class="screen">
+                <iframe title="Progress" src="pages/progress.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">学习进度</div>
+            <div class="text-xs text-slate-500">pages/progress.html</div>
+          </div>
+        </div>
+
+        <div class="group-iphone">
+          <div class="device">
+            <div class="bezel">
+              <div class="island"></div>
+              <div class="screen">
+                <iframe title="Me" src="pages/me.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">我的/设置</div>
+            <div class="text-xs text-slate-500">pages/me.html</div>
+          </div>
+        </div>
+
+        <!-- Huawei 外观页面 -->
+        <div class="group-huawei">
+          <div class="device-huawei">
+            <div class="bezel">
+              <div class="camera"></div>
+              <div class="screen">
+                <iframe title="Roadmap" src="pages/roadmap.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">课程路线图（Huawei）</div>
+            <div class="text-xs text-slate-500">pages/roadmap.html</div>
+          </div>
+        </div>
+
+        <div class="group-huawei">
+          <div class="device-huawei">
+            <div class="bezel">
+              <div class="camera"></div>
+              <div class="screen">
+                <iframe title="Tasks" src="pages/tasks.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">每日任务中心（Huawei）</div>
+            <div class="text-xs text-slate-500">pages/tasks.html</div>
+          </div>
+        </div>
+
+        <div class="group-huawei">
+          <div class="device-huawei">
+            <div class="bezel">
+              <div class="camera"></div>
+              <div class="screen">
+                <iframe title="Review" src="pages/review.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">错题本与复习（Huawei）</div>
+            <div class="text-xs text-slate-500">pages/review.html</div>
+          </div>
+        </div>
+
+        <div class="group-huawei">
+          <div class="device-huawei">
+            <div class="bezel">
+              <div class="camera"></div>
+              <div class="screen">
+                <iframe title="Storybook" src="pages/storybook.html" class="w-full h-full"></iframe>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 flex items-center justify-between">
+            <div class="font-medium">绘本跟读（Huawei）</div>
+            <div class="text-xs text-slate-500">pages/storybook.html</div>
+          </div>
+        </div>
+      </section>
+
+      <p class="mt-8 text-center text-xs text-slate-400">提示：点击右上角切换展示 iPhone 或 Huawei 外观。</p>
+    </main>
+  </body>
+</html>

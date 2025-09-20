@@ -1,0 +1,7 @@
+/* Huawei Mate70-like device chrome */
+.device-hw{width:360px;max-width:100%;margin:0 auto}
+.device-hw .bezel{position:relative;width:100%;padding:16px;background:linear-gradient(145deg,#0b1020,#0f1730);border-radius:28px;box-shadow:0 8px 24px rgba(2,6,23,.35), inset 0 0 0 2px rgba(255,255,255,.05)}
+.device-hw .camera{position:absolute;left:50%;top:8px;transform:translateX(-50%);height:12px;width:12px;background:radial-gradient(circle at 35% 35%,#1f2937 0,#0b1220 60%);border-radius:50%;box-shadow:0 0 0 2px rgba(255,255,255,.06)}
+.device-hw .screen{position:relative;background:#000;border-radius:24px;overflow:hidden;height:740px}
+.device-hw iframe{display:block;border:0;height:100%}
+@media (min-width:1024px){.device-hw{width:380px}.device-hw .screen{height:780px}}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>我的</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  </head>
+  <body class="bg-white text-slate-800" onload="gsap.from('.m-title',{y:12,opacity:0,duration:0.35,ease:'power2.out'});gsap.set('.m-card',{opacity:0,y:14});gsap.to('.m-card',{opacity:1,y:0,stagger:0.08,duration:0.45,ease:'power2.out'});">
+    <div class="h-[740px] lg:h-[780px] flex flex-col">
+      <div class="pt-6 px-4 flex items-center justify-between">
+        <div class="text-2xl font-extrabold m-title">我的</div>
+        <button class="px-3 py-1.5 rounded-lg bg-slate-100 text-sm">退出</button>
+      </div>
+
+      <div class="px-4 mt-4 flex items-center gap-4 m-card">
+        <img class="w-16 h-16 rounded-2xl object-cover" src="https://images.unsplash.com/photo-1544006659-f0b21884ce1d?q=80&w=300&auto=format&fit=crop" alt="avatar" />
+        <div>
+          <div class="font-bold text-lg">Yoyo</div>
+          <div class="text-sm text-slate-500">一年级 · LV 5</div>
+        </div>
+      </div>
+
+      <div class="px-4 mt-4 grid gap-3">
+        <div class="rounded-2xl border border-slate-200 p-4 m-card">
+          <div class="font-semibold"><i class="fa-solid fa-palette text-fuchsia-500"></i> 外观</div>
+          <div class="mt-2 flex items-center justify-between text-sm">
+            <div class="text-slate-600">主题色</div>
+            <select class="bg-slate-50 border border-slate-200 rounded-lg px-2 py-1">
+              <option>天空蓝</option>
+              <option>葡萄紫</option>
+              <option>薄荷绿</option>
+            </select>
+          </div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-4 m-card">
+          <div class="font-semibold"><i class="fa-solid fa-language text-indigo-500"></i> 学习偏好</div>
+          <div class="mt-2 text-sm text-slate-600">每日目标：10 单词</div>
+          <div class="mt-2"><input type="range" min="5" max="20" value="10" class="w-full" /></div>
+        </div>
+        <div class="rounded-2xl border border-slate-200 p-4 m-card">
+          <div class="font-semibold"><i class="fa-solid fa-circle-info text-sky-500"></i> 关于</div>
+          <div class="mt-2 text-sm text-slate-600">Kid Study 原型 v1.0</div>
+        </div>
+      </div>
+
+      <!-- 底部标签栏 -->
+      <div class="mt-auto border-t border-slate-200 bg-white/80 backdrop-blur px-6 py-3 flex items-center justify-between text-slate-500">
+        <a href="home.html"><i class="fa-solid fa-house text-lg"></i><div class="text-[10px]">首页</div></a>
+        <a href="lessons.html"><i class="fa-solid fa-book text-lg"></i><div class="text-[10px]">课程</div></a>
+        <a href="games.html"><i class="fa-solid fa-gamepad text-lg"></i><div class="text-[10px]">游戏</div></a>
+        <a href="me.html" class="text-sky-600"><i class="fa-solid fa-user text-lg"></i><div class="text-[10px]">我的</div></a>
+      </div>
+    </div>
+  </body>
+</html>

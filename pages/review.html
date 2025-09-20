@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>错题本与复习</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body class="bg-white text-slate-800">
+    <div class="h-[740px] lg:h-[780px] flex flex-col">
+      <div class="pt-6 px-4 flex items-center justify-between">
+        <div class="text-2xl font-extrabold">错题本与复习</div>
+        <button class="px-3 py-1.5 rounded-lg bg-slate-100 text-sm">规则</button>
+      </div>
+
+      <div class="px-4 mt-4 grid gap-3">
+        <div class="rounded-2xl border border-slate-200 p-4 bg-amber-50">
+          <div class="font-semibold">今日待复习 8 个</div>
+          <div class="mt-2 text-sm text-slate-700">根据艾宾浩斯曲线安排</div>
+          <div class="mt-3 h-2 rounded-full bg-amber-100"><div class="h-2 rounded-full bg-amber-500" style="width: 30%"></div></div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div class="rounded-2xl overflow-hidden border border-slate-100 bg-white shadow-sm">
+            <img class="h-24 w-full object-cover" src="https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?q=80&w=500&auto=format&fit=crop" alt="dog" />
+            <div class="p-3">
+              <div class="font-semibold">Dog</div>
+              <div class="text-xs text-slate-500">错误 2 次 · 间隔：1 天</div>
+              <div class="mt-2 flex items-center justify-between text-sm">
+                <button class="px-2 py-1 rounded-lg bg-sky-500 text-white">复习</button>
+                <button class="text-sky-600"><i class="fa-solid fa-volume-high"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-2xl overflow-hidden border border-slate-100 bg-white shadow-sm">
+            <img class="h-24 w-full object-cover" src="https://images.unsplash.com/photo-1470071131384-001b85764a82?q=80&w=500&auto=format&fit=crop" alt="banana" />
+            <div class="p-3">
+              <div class="font-semibold">Banana</div>
+              <div class="text-xs text-slate-500">错误 1 次 · 间隔：3 天</div>
+              <div class="mt-2 flex items-center justify-between text-sm">
+                <button class="px-2 py-1 rounded-lg bg-sky-500 text-white">复习</button>
+                <button class="text-sky-600"><i class="fa-solid fa-volume-high"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-auto border-t border-slate-200 bg-white/80 backdrop-blur px-6 py-3 flex items-center justify-between text-slate-500">
+        <a href="home.html"><i class="fa-solid fa-house text-lg"></i><div class="text-[10px]">首页</div></a>
+        <a href="lessons.html" class="text-sky-600"><i class="fa-solid fa-book text-lg"></i><div class="text-[10px]">课程</div></a>
+        <a href="games.html"><i class="fa-solid fa-gamepad text-lg"></i><div class="text-[10px]">游戏</div></a>
+        <a href="me.html"><i class="fa-solid fa-user text-lg"></i><div class="text-[10px]">我的</div></a>
+      </div>
+    </div>
+  </body>
+</html>
